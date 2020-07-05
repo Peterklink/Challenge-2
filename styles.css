@@ -38,18 +38,15 @@ margin-bottom: 20px;
 }
 
 .item{
-  position:relative;
-  width: 400px;
-  height: 250px;
+  position: relative;
+  width: 350px;
+  height: 200px;
   padding: 0 20px 50px 20px;
   background-color: white;
-  border-radius: 3%;
+  border-radius: 2%;
   box-shadow: 1px 1px 15px hsl(229, 6%, 66%);
 }
 
-.item:hover{
-  transform: scale(1.05);
-}
 
 .team{
   grid-row: 0/2;
@@ -97,6 +94,74 @@ footer{
   text-align: center;
 }
 
+@media screen and (max-width: 1300px){
+
+  .wrapper{
+    grid-column-gap: 30px;
+  }
+
+  .item{
+    position:relative;
+    width: 300px;
+    height: 150px;
+    padding: 0 20px 50px 20px;
+    background-color: white;
+    border-radius: 2%;
+    box-shadow: 1px 1px 15px hsl(229, 6%, 66%);
+  }
+
+  @media screen and (max-width: 1120px){
+
+    .wrapper{
+      grid-column-gap: 30px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .item{
+      position:relative;
+      width: 300px;
+      height: 150px;
+      padding: 0 20px 50px 20px;
+      background-color: white;
+      border-radius: 2%;
+      box-shadow: 1px 1px 15px hsl(229, 6%, 66%);
+    }
+
+    .team{
+      grid-row: 1;
+      grid-column: auto;
+      justify-self: start;
+
+      border-top: solid hsl(0, 78%, 62%) 5px;
+    }
+
+    .supervisor{
+      grid-row:1;
+      grid-column: auto;
+      align-self: center;
+      justify-self:end;
+
+      border-top: solid hsl(180, 62%, 55%) 5px;
+    }
+
+    .calculator{
+      grid-row:2;
+      grid-column: auto;
+      align-self: center;
+      justify-self: start;
+
+      border-top: solid hsl(212, 86%, 64%) 5px;
+    }
+
+    .karma{
+      grid-row:2;
+      grid-column: auto;
+      justify-self: end;
+      border-top: solid hsl(34, 97%, 64%) 5px;
+    }
+
+}
+
 @media screen and (max-width: 800px){
 
   .header{
@@ -118,14 +183,15 @@ footer{
     height: 250px;
     padding: 0 20px 50px 20px;
     background-color: white;
-    border-radius: 3%;
+    border-radius: 2%;
     box-shadow: 1px 1px 15px hsl(229, 6%, 66%);
   }
 
   .team{
     grid-row: 2;
     grid-column: auto;
-
+    align-self: center;
+    justify-self:center;
     border-top: solid hsl(0, 78%, 62%) 5px;
   }
 
@@ -150,7 +216,8 @@ footer{
   .karma{
     grid-row:3;
     grid-column: auto;
-
+    align-self: center;
+    justify-self:center;
     border-top: solid hsl(34, 97%, 64%) 5px;
   }
 
